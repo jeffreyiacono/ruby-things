@@ -1,6 +1,5 @@
 def check_triangle(a, b, c)
-  check = (a + b >= c) && (b + c >= a) && (a + c >= b)
-  return check
+  check = (a + b > c) && (b + c > a) && (a + c > b)
 end
 
 N = 100000
