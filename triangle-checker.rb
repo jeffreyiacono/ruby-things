@@ -1,14 +1,13 @@
 def check_triangle(a, b, c)
-  a + b > c && b + c > a && a + c > b
+  a + b > c
 end
 
 N = 100000
 p = 0
 for i in 1..N
-  a = rand
-  b = (1 - a) * rand
-  c = 1 - (a + b)
-  p += 1 if check_triangle(a, b, c)
+  breaks = [rand, rand].sort
+  lengths = [breaks[0], breaks[1] - breaks[0], 1 - breaks[1]].sort
+  p += 1 if check_triangle(lengths[0], lengths[1], lengths[2])
 end
 
 puts p.to_f / N
