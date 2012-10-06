@@ -1,4 +1,4 @@
-for x in 1..100
+1.upto(100) do |x|
   if x % 15 == 0
     puts "FizzBuzz"
   elsif x % 3 == 0 
