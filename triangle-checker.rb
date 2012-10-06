@@ -15,5 +15,3 @@ for i in 1..N
 end
 
 puts p.to_f / N
-
-
