@@ -8,9 +8,7 @@ for i in 1..N
   a = rand
   b = (1 - a) * rand
   c = 1 - (a + b)
-  if check_triangle(a, b, c)
-    p += 1
-  end
+  p += 1 if check_triangle(a, b, c)
 end
 
 puts p.to_f / N
